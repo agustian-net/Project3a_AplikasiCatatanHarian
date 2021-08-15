@@ -30,7 +30,7 @@
             android:layout_height="71dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical"
-            android:text="@string/aplikasi_catatan_harian"
+            android:text="@string/project_1"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textColor="@color/black"

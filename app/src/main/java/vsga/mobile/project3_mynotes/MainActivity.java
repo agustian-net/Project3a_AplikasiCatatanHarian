@@ -7,11 +7,11 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Aplikasi Catatan Harian");
         setContentView(R.layout.activity_main);
 
-        listView = (ListView) findViewById(R.id.ListView);
+        listView = findViewById(R.id.ListView);
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(MainActivity.this, InsertAndViewActivity.class);
             Map<String,Object> data = (Map<String, Object>) parent.getAdapter().getItem(position);
@@ -130,6 +130,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu1, menu);
+        return true;
     }
 
     void tampilkanDialogKonfirmasiHapusCatatan(final String filename){

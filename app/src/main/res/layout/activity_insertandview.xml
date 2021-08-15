@@ -53,6 +53,9 @@
             android:padding="5dp"
             android:singleLine="false"
             android:textColor="#000"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="top"
             />
 
         <Button
@@ -64,6 +67,7 @@
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="14sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:onClick="onClick"/>
     </LinearLayout>
 </LinearLayout>
